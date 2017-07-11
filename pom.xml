@@ -1,0 +1,162 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.myschoolbook</groupId>
+  <artifactId>ReadJSONtoDatabase</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>ReadJSONtoDatabase</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <finalName>jsonreader</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <inherited>true</inherited>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.0-beta3</version>
+    </dependency>
+     <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.0-alpha4</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20160810</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.39</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.10.Final</version>
+    </dependency>
+      <!-- SPRING -->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-context</artifactId>
+          <version>4.3.7.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-aop</artifactId>
+          <version>4.3.7.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-webmvc</artifactId>
+          <version>4.3.7.RELEASE</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-web</artifactId>
+          <version>4.3.7.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>2.5</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
+     <!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
+     <dependency>
+       <groupId>jfree</groupId>
+       <artifactId>jfreechart</artifactId>
+       <version>1.0.13</version>
+     </dependency>
+
+    <!-- JAX-RS -->
+  <dependency>
+    <groupId>org.glassfish.jersey.containers</groupId>
+    <artifactId>jersey-container-servlet-core</artifactId>
+    <!-- use the following artifactId if you don't need servlet 2.x compatibility -->
+    <!-- artifactId>jersey-container-servlet</artifactId -->
+  </dependency>
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.0.1</version>
+    </dependency>
+  <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-webmvc -->
+  <dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-rest-webmvc</artifactId>
+    <version>2.5.1.RELEASE</version>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <version>1.5.3.RELEASE</version>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-moxy -->
+  <dependency>
+    <groupId>org.glassfish.jersey.media</groupId>
+    <artifactId>jersey-media-moxy</artifactId>
+    <version>2.0-m05-2</version>
+  </dependency>
+  <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson -->
+  <dependency>
+    <groupId>org.glassfish.jersey.media</groupId>
+    <artifactId>jersey-media-json-jackson</artifactId>
+    <version>2.25.1</version>
+  </dependency>
+      <dependency>
+          <groupId>org.glassfish.jersey</groupId>
+          <artifactId>jersey-bom</artifactId>
+          <version>2.16</version>
+      </dependency>
+  </dependencies>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
